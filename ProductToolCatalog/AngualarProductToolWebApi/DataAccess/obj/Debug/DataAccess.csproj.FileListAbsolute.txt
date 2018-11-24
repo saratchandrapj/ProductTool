@@ -1,0 +1,10 @@
+C:\Users\0003620\Desktop\AngularProductTool\AngualarProductToolWebApi\DataAccess\bin\Debug\DataAccess.dll.config
+C:\Users\0003620\Desktop\AngularProductTool\AngualarProductToolWebApi\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\0003620\Desktop\AngularProductTool\AngualarProductToolWebApi\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\0003620\Desktop\AngularProductTool\AngualarProductToolWebApi\DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\0003620\Desktop\AngularProductTool\AngualarProductToolWebApi\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\0003620\Desktop\AngularProductTool\AngualarProductToolWebApi\DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\0003620\Desktop\AngularProductTool\AngualarProductToolWebApi\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\0003620\Desktop\AngularProductTool\AngualarProductToolWebApi\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\0003620\Desktop\AngularProductTool\AngualarProductToolWebApi\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\0003620\Desktop\AngularProductTool\AngualarProductToolWebApi\DataAccess\obj\Debug\DataAccess.pdb

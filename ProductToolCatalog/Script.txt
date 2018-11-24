@@ -1,0 +1,67 @@
+Create Table ProductCategory (
+ProductCategoryId int not null Identity(1,1),
+CategoryName varchar(max) not null ,
+[Description] varchar(max) null
+CONSTRAINT [PK_ProductCategoryId] PRIMARY KEY CLUSTERED 
+(
+	[ProductCategoryId] ASC
+)
+)
+
+Create Table Products (
+ProductId int not null Identity(1,1),
+ProductName varchar(50) not null,
+Price decimal(18,2) null,
+[Description] varchar(max) null,
+ProductCategoryId int null
+CONSTRAINT [PK_ProductId] PRIMARY KEY CLUSTERED 
+(
+	[ProductId] ASC
+)
+)
+
+ALTER TABLE [dbo].[Products]  WITH CHECK ADD  CONSTRAINT [FK_Products_ProductCategory] FOREIGN KEY([ProductCategoryId])
+REFERENCES [dbo].[ProductCategory] ([ProductCategoryId])
+GO
+
+
+
+select * from Products
+select * from ProductCategory
+
+--drop table ProductCategory
+--drop table Products
+
+insert into ProductCategory (CategoryName,[Description])
+values ('Category1','test1')
+insert into ProductCategory (CategoryName,[Description])
+values ('Category2','test2')
+insert into ProductCategory (CategoryName,[Description])
+values ('Category3','test3')
+
+insert into Products (ProductName,Price,[Description],ProductCategoryId)
+values ('P1C1',100,'testproduct',1)
+insert into Products (ProductName,Price,[Description],ProductCategoryId)
+values ('P2C1',90,'testproduct',1)
+insert into Products (ProductName,Price,[Description],ProductCategoryId)
+values ('P3C1',80,'testproduct',1)
+
+insert into Products (ProductName,Price,[Description],ProductCategoryId)
+values ('P1C2',70,'testproduct',2)
+insert into Products (ProductName,Price,[Description],ProductCategoryId)
+values ('P2C2',60,'testproduct',2)
+insert into Products (ProductName,Price,[Description],ProductCategoryId)
+values ('P3C2',50,'testproduct',2)
+insert into Products (ProductName,Price,[Description],ProductCategoryId)
+values ('P4C2',40,'testproduct',2)
+
+insert into Products (ProductName,Price,[Description],ProductCategoryId)
+values ('P1C3',30,'testproduct',3)
+insert into Products (ProductName,Price,[Description],ProductCategoryId)
+values ('P2C3',20,'testproduct',3)
+insert into Products (ProductName,Price,[Description],ProductCategoryId)
+values ('P3C3',120,'testproduct',3)
+insert into Products (ProductName,Price,[Description],ProductCategoryId)
+values ('P4C3',130,'testproduct',3)
+insert into Products (ProductName,Price,[Description],ProductCategoryId)
+values ('P5C3',110,'testproduct',3)

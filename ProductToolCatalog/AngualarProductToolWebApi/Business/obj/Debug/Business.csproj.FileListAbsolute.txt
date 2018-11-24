@@ -1,0 +1,12 @@
+C:\Users\0003620\Desktop\AngularProductTool\AngualarProductToolWebApi\Business\bin\Debug\Business.dll.config
+C:\Users\0003620\Desktop\AngularProductTool\AngualarProductToolWebApi\Business\bin\Debug\Business.dll
+C:\Users\0003620\Desktop\AngularProductTool\AngualarProductToolWebApi\Business\bin\Debug\Business.pdb
+C:\Users\0003620\Desktop\AngularProductTool\AngualarProductToolWebApi\Business\bin\Debug\DataAccess.dll
+C:\Users\0003620\Desktop\AngularProductTool\AngualarProductToolWebApi\Business\bin\Debug\EntityFramework.dll
+C:\Users\0003620\Desktop\AngularProductTool\AngualarProductToolWebApi\Business\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\0003620\Desktop\AngularProductTool\AngualarProductToolWebApi\Business\bin\Debug\DataAccess.pdb
+C:\Users\0003620\Desktop\AngularProductTool\AngualarProductToolWebApi\Business\bin\Debug\EntityFramework.xml
+C:\Users\0003620\Desktop\AngularProductTool\AngualarProductToolWebApi\Business\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\0003620\Desktop\AngularProductTool\AngualarProductToolWebApi\Business\obj\Debug\Business.csprojResolveAssemblyReference.cache
+C:\Users\0003620\Desktop\AngularProductTool\AngualarProductToolWebApi\Business\obj\Debug\Business.dll
+C:\Users\0003620\Desktop\AngularProductTool\AngualarProductToolWebApi\Business\obj\Debug\Business.pdb

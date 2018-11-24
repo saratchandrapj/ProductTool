@@ -1,0 +1,78 @@
+﻿<div class="modal_cover" ng-if="show_modal">
+	<div class="modal_popup">
+		<h1 class="header" ng-if="modal_mode=='add'"> Add New product</h1>
+		<h1 class="header" ng-if="modal_mode=='edit'"> Edit product</h1>
+		<div class="modal_contents">
+			<span>Name</span> <input type="text" name="" ng-model="staging_item.ProductName">
+			<br>
+			<div ng-if="modal_mode == 'edit'">
+				<span>Category</span> <select name="" ng-model="staging_item.ProductCategory.CategoryName">
+					<option ng-repeat="category in data.categories" ng-init="category.CategoryName" value="{{category.CategoryName}}">{{category.CategoryName}}</option>
+				</select>
+			</div>
+			<div ng-if="modal_mode == 'add'">
+				<span>Category</span> <select name="" ng-model="staging_item.ProductCategoryId">
+					<option ng-repeat="category in data.categories" ng-init="category.CategoryName" value="{{category.ProductCategoryId}}">{{category.CategoryName}}</option>
+				</select>
+			</div>
+			<br>
+			<span>Price in ₹</span> <input type="text" name="" min="0" max="5" numbers-only="" ng-model="staging_item.Price">
+			<br>
+			<div class="form-group">
+				<label for="Description">Description:</label>
+				<textarea class="form-control" rows="5" id="comment" ng-model="staging_item.Description"></textarea>
+			</div>
+		</div>
+		<div class="header" style="position :absolute; bottom : 0px; height: 5.2rem;">
+			<button type="button" class="btn btn-default" ng-click="edit_product_cancel()">Cancel</button>
+			<button ng-if="modal_mode == 'edit'" type="button" class="btn btn-default" ng-click="edit_product_save()">Save</button>
+			<button ng-if="modal_mode == 'add'" type="button" class="btn btn-default" ng-click="saveNewProduct()">add</button>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<label>Welcome - {{user}}</label>
+	<button type="button" style="float:right" class="btn-primary" ng-click="logout()">Logout</button> 
+</div>
+<div class="row col-lg-6">
+	<select ng-model="current_category">
+		<option ng-repeat="category in data.categories" ng-init="current_category" id="{{category.ProductCategoryId}}" value="{{category.CategoryName}}">{{category.CategoryName}}</option>
+	</select>
+	<button class='btn btn-primary' style="float:right;" type="button" name="button" ng-click="addNewProduct()">Add new item</button>
+</div>
+<div class="col-lg-6">
+
+</div>
+<div class="col-lg-12">
+
+</div>
+<div class="col-lg-6">
+	<table>
+		<tr>
+			<th ng-repeat="field_name in data.product_fields">{{field_name}}</th>
+		</tr>
+
+		<tr ng-repeat="item in productByFilter(current_category,current_offset) ">
+			<td ng-click="edit_product(item)">  <a>{{item.ProductName}}</a> </td>
+			<td> {{item.Price}}</td>
+			<td>{{item.Description}}</td>
+		</tr>
+
+
+	</table>
+
+	<button ng-click="shift(-1)">  < </button>
+	<button ng-click="shiftByIndex(i)" class="paginators" ng-repeat="i in generateRange( productByFilter(current_category).length/ipp ) "> {{i}} </button>
+	<button ng-click="shift(1)"> > </button>
+
+
+	<!--
+		<tr ng-repeat="items in data.products | filter: {ProductCategory: {CategoryName: current_category}} ">
+			<td ng-click="edit_product(items)"><a> {{items.ProductName}} </a></td>
+			<td> {{items.Price | currency:"₹"}}</td>
+			<td>{{items.Description}}</td>
+		</tr>
+	</table>
+	  -->
+</div>
