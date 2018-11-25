@@ -58,3 +58,13 @@ th,td{
 table{
   width: 100%;
 }
+
+.selection_style {
+	padding: 0.4rem 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.seperator {
+	margin-top : 15px;
+	margin-bottom : 15px;
+}
