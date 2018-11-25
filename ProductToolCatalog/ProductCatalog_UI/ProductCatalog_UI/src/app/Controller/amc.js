@@ -107,18 +107,19 @@ TestMod.controller('tmController', function ($scope, $http, dataFactory, $rootSc
           });
   }
     //insert New Product
-  $scope.insertProduct = function (product) {
+  function insertProduct (product) {
       //Fake customer data
-      dataFactory.insertproduct(product)
+      dataFactory.insertProduct(product)
           .then(function (response) {
               $scope.status = 'Inserted Product! Refreshing Product List.';
-              $scope.data.products.push(product);
+              //$scope.data.products.push(product);
+              getProducts();
           }, function (error) {
               $scope.status = 'Unable to insert PRoduct: ' + error.message;
           });
   };
 
-  $scope.updateProduct = function (product) {
+  function updateProduct  (product) {
       dataFactory.updateProduct(product)
        .then(function (response) {
            $scope.status = 'Updated Product List! Refreshing customer list.';
@@ -280,7 +281,7 @@ TestMod.controller('tmController', function ($scope, $http, dataFactory, $rootSc
     //console.log($scope.current_edit_item);
 
       //Call service to update
-    $scope.updateProduct($scope.staging_item);
+    updateProduct($scope.staging_item);
 
     $scope.current_edit_item = {};
     $scope.staging_item = {};
@@ -303,17 +304,14 @@ TestMod.controller('tmController', function ($scope, $http, dataFactory, $rootSc
       $scope.staging_item = {};
   }
   $scope.saveNewProduct = function(){
-      //$("#myModal").modal('close');
-   //   console.log($scope.data.categories);
-  //    console.log($scope.data.products[$scope.staging_item.category]);
 
       //Call service to insert
-      $scope.insertProduct($scope.staging_item);
+     insertProduct($scope.staging_item);
 
     $scope.staging_item = {};
     $scope.modal_mode = "";
     $scope.show_modal = false;
-    //$("#myModal").modal('close');
+
   }
 
 
